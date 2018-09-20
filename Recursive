@@ -1,0 +1,28 @@
+//
+//  main.cpp
+//  Euclidean Alogrithm
+//
+//  Created by Sihang Li on 11/13/17.
+//  Copyright © 2017 Sihang Li. All rights reserved.
+//
+
+#include <iostream>
+using namespace std;
+
+//Euclidean Alogrithm resurcively
+int gcd (int n, int d);
+int main (){
+    int n,d;
+    cout<<"Input the value of n."<<endl;
+    cin>>n;
+    cout<<"Input the value of d."<<endl;
+    cin>>d;
+    cout<<"The greatest common divisor is: "<<gcd (n,d)<<endl;
+    return 0;
+}
+int gcd (int n,int d){
+    if (d==0)
+        return n;
+    else
+        return gcd(d, n%d);
+}
