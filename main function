@@ -1,0 +1,39 @@
+//
+//  main.cpp
+//  Euclidean Alogrithm
+//
+//  Created by Sihang Li on 11/13/17.
+//  Copyright © 2017 Sihang Li. All rights reserved.
+//
+
+#include <iostream>
+using namespace std;
+
+ //Euclidean Algorithm non-recusive
+int main(){
+    int a, b, r, smaller, bigger;
+    cout<<"Input two integers to calculate their greatest common divisor. The orders don't matter."<<endl;
+    cout<<"The first number is:"; cin>>a;
+    cout<<"The second number is:"; cin>>b;
+    
+    if (a==b){
+        r=a;
+    cout<<"The greatest common divisor of "<<a<<" and "<<b<<" is "<<r<<endl;
+    }
+    else {
+        if (a<b) {
+            a=a*b;
+            b=a/b;
+            a=a/b;
+        }//Swap without a temporary variable
+        bigger=a;
+        smaller=b;
+        while (r!=0){
+            r=bigger%smaller;
+            bigger=smaller;
+            smaller=r;
+        }
+    cout<<"The greatest common divisor of "<<a<<" and "<<b<<" is "<<bigger<<endl;
+    }
+    return 0;
+}
