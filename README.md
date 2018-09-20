@@ -1,2 +1,2 @@
-# Euclidean-Alogrithm-
-Finds the greatest common divisor of two numbers non-recursively. 
+# Personal programs-
+Side projects.
